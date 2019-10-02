@@ -1,0 +1,20 @@
+{
+  "name": "statsdtoazureblob",
+  "version": "0.1.9",
+  "description": "Ingestion of events from statsd to Azure Blob",
+  "main": "index.js",
+  "dependencies": {
+    "@azure/storage-blob": "^12.0.0-preview.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc statsdtoazureblob.ts",
+    "dockerbuild": "tsc statsdtoazureblob.ts && docker build -t docker.io/dgkanatsios/statsd-alpine-azureblob:0.1.9 . && docker system prune -f",
+    "dockerpush": "docker push docker.io/dgkanatsios/statsd-alpine-azureblob:0.1.9",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dimitris-Ilias Gkanatsios <dgkanatsios@outlook.com>",
+  "license": "Apache",
+  "url": "https://github.com/dgkanatsios/statsdtoazureblob",
+  "homepage": "https://github.com/dgkanatsios/statsdtoazureblob"
+}

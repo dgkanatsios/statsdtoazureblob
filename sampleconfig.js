@@ -1,0 +1,3 @@
+{
+    backends: ["../statsdtoazureblob/statsdtoazureblob"]
+}
